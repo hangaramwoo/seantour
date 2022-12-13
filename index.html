@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바다여행</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- XEIcon 쓰려면 <title>과 <style> 태그 사이에 CDN 코드 붙여넣어야 함 -->
+        <!-- //cdn 앞에 https: 없으면 꼭 넣어주기! 안 넣으면 로딩이 엄청 느려짐. 아이콘/폰트 모두 동일 -->
+    <style>
+        /* 나눔스퀘어 */
+        @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+        /* 나눔바른고딕 */
+        @font-face {
+            font-family: 'NanumBarunGothic';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+            src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'NanumBarunGothic';
+            font-style: normal;
+            font-weight: 700;
+            src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+            src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+        }
+
+        @font-face {
+            font-family: 'NanumBarunGothic';
+            font-style: normal;
+            font-weight: 300;
+            src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+            src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+        }
+        /* alt+shift+F 자동정렬 */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            color: #333;
+            line-height: 1;
+            font-family: 'NanumBarunGothic';
+            font-weight: 400;
+        }
+
+        /* 💕header start💕 */
+        header{
+            width: 1280px;
+            margin: 0 auto;
+            height: 100px;
+            line-height: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+        header h1 a img{
+            width: 190px;
+        }
+        header ul li{
+            list-style: none;
+            display: inline-block;
+        }
+        header ul li a{
+            text-decoration: none;
+            color: #333;
+            font-size: 17px;
+            margin-left: 40px;
+        }
+
+        /* 💟.main_visual start💟 */
+        .main_visual{
+            height: 700px;
+        }
+        .main_visual video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        
+        /* .🎶cont01 start🎶 */
+
+        .cont01{
+            background-color: #eee;
+            padding: 100px 0;
+        }
+        .cont01 .inner{
+            width: 1280px;
+            margin: 0 auto;
+        }
+
+
+        .cont01 .inner .title{
+            text-align: center;
+        }
+        .cont01 .inner .title h3{
+            font-family: 'NanumSquare';
+            font-weight: 800;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+        .cont01 .inner .title p{
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+
+        .cont01 .inner .list{
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .cont01 .inner .list div{
+            width: 308px;
+            background-color: #fff;
+            border-radius: 20px;
+        }
+        .cont01 .inner .list div img{
+            display: block;
+        }
+        .cont01 .inner .list div ul{
+            padding: 20px;
+            list-style: none;
+        }
+        .cont01 .inner .list div ul li:nth-child(1){
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+
+        
+        /* 🌹.cont02 start🌹 */
+
+        .cont02{
+            padding: 100px 0;
+        }
+        .cont02 .inner{
+            width: 1280px;
+            margin: 0 auto;
+        }
+
+        .cont02 .inner .title h3{
+            text-align: center;
+            font-family: 'NanumSquare';
+            font-size: 35px;
+            font-weight: 800;
+        }
+        .cont02 .inner .title p{
+            text-align: center;
+            font-size: 20px;
+            margin: 20px 0 40px;
+        }
+
+        .cont02 .inner .list{
+            display: flex;
+            justify-content: space-between;
+        }
+        .cont02 .inner .list div{
+            width: 308px;
+        }
+
+        .cont02 .inner .list div:hover img{ /* div에게 hover(마우스 갖다대기)했을 때 img에 대한 동작 설정 */
+            transform: scale(1.2); /* 스케일: 사이즈 변경, 기본값 1 */
+            transition: 0.7s; /* 변화시키고자 하는 시간값 */
+        }
+
+        .cont02 .inner .list div figure{
+            width: 100;
+            height: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .cont02 .inner .list div ul{
+            padding: 20px;
+            list-style: none;
+        }
+
+        .cont02 .inner .list div ul li i{
+            font-size: 14px;
+            color: #5AC3F4;
+        }
+
+        .cont02 .inner .list div ul li:nth-child(1){
+            font-weight: 700;
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+
+
+        /* 🎀footer start🎀 */
+        footer{
+            background-color: #333;
+            color: #fff;
+            padding: 50px 0;
+        }
+        footer .inner{
+            width: 1280px;
+            margin: 0 auto;
+        }
+        footer .inner ul li{
+            list-style: none;
+            display: inline-block;
+            padding-right: 30px;
+        }
+        footer .inner p{
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header> <!-- 홈페이지 상단 바 부분을 헤더라고 함 -->
+        <h1>
+            <a href="#"><img src="img/logo-seantour.svg" alt="바다이야기" /></a>
+             <!-- 마우스오른쪽클릭-검사-background img 찾아서 다른 이름 저장 가능 -->
+        </h1>
+        <ul>
+            <li><a href="#">추천여행</a></li>
+            <li><a href="#">어촌체험휴양마을</a></li>
+            <li><a href="#">여행정보</a></li>
+            <li><a href="#">공유바다</a></li>
+        </ul> <!-- 홈페이지 상단 메뉴를 네비게이터라고 함. 원래 <nav> 안에 <ul> 안에 <li> 들어가야 하는데 빠트림 -->
+    </header>
+
+    <section class="main_visual"> <!-- 홈페이지에서 1번째로 보이는 이미지나 영상을 메인비주얼이라고 함 -->
+        <video autoplay muted loop>
+            <!-- video 태그 안에 자동재생, 음소거, 무한재생 등 적용 가능, 자동재생 시 음소거 필수
+            autoplay: 자동재생
+            muted: 음소거
+            loop: 반복재생
+            controls: 컨트롤바 생성           
+            -->
+            <source src="img/video.mp4" type="video/mp4" />
+        </video>
+    </section> <!-- main_visul end -->
+
+
+    <section class="cont01">
+        <div class="inner">
+
+
+            <div class="title">
+                <h3>테마여행</h3>
+                <p>바다여행의 테마별 여행코스를 만나보세요.</p>
+            </div> <!-- .title end -->
+
+
+            <div class="list">
+                <div>
+                    <img src="img/cont01_img01.png" alt="어촌의 보물 이미지" />
+
+                    <ul>
+                        <li>어촌의 보물, 국가중요어업...</li>
+                        <li></i> 경상남도 남해군</li>
+                    </ul>
+                </div> <!-- 1 -->
+           
+                <div>
+                    <img src="img/cont01_img02.png" alt="사계마을 이미지" />
+                    <ul>
+                        <li>5월의 추천여행 "제주 사계...</li>
+                        <li></i> 전국</li>
+                    </ul>
+                </div> <!-- 2 -->
+           
+                <div>
+                    <img src="img/cont01_img03.png" alt="청사포 이미지" />
+                    <ul>
+                        <li>부산 가족 나들이 추천...</li>
+                        <li></i> 전국</li>
+                    </ul>
+                </div> <!-- 3 -->
+           
+                <div>
+                    <img src="img/cont01_img04.png" alt="어촌마을 이미지" />
+                    <ul>
+                        <li>5월 이달의 어촌마을</li>
+                        <li></i> 전국</li>
+                    </ul>
+                </div> <!-- 4 -->
+            </div> <!-- .list end -->
+
+
+        </div> <!-- .inner end -->
+    </section> <!-- cont01 end -->
+
+
+
+    <section class="cont02">
+        <div class="inner">
+            
+
+            <div class="title">
+                <h3>어촌체험휴양마을</h3>
+                <p>바다여행에서 추천하는 체험마을을 만나보세요.</p>
+            </div> <!-- .title end -->
+
+
+            <div class="list">
+
+                <div>
+                    <figure> <!-- 이미지나 동영상을 감쌀 때 쓸 수 있음. 이미지/동영상 설명 태그인 <caption>을 사용 가능 -->
+                        <img src="img/cont02_img01.png" alt="거일1리마을 이미지" />
+                        <!-- EXIcon -> 벡터 그래픽 아이콘 툴킷, 홈페이지 제작 시 사용 -->
+                    </figure>
+
+                    <ul>
+                        <li>거일1리마을</li>
+                        <li><i class="xi-maker"></i> 경상북도 울진군 평해읍 울진대게로</li>
+                    </ul>
+                </div> <!-- 01 -->
+                <div>
+                    <figure>
+                        <img src="img/cont02_img02.png" alt="이어마을 이미지" />
+                    </figure>
+
+                    <ul>
+                        <li>이어마을</li>
+                        <li><i class="xi-maker"></i> 경상남도 남해군 고현면 남해대로</li>
+                    </ul>
+                </div> <!-- 02 -->
+                <div>
+                    <figure> 
+                        <img src="img/cont02_img03.png" alt="흘곶마을 이미지" />
+                    </figure>
+
+                    <ul>
+                        <li>흘곶마을</li>
+                        <li><i class="xi-maker"></i> 경기 안산시 단원구 대남로 618</li>
+                    </ul>
+                </div> <!-- 03 -->
+                <div>
+                    <figure> 
+                        <img src="img/cont02_img04.png" alt="왕산마을 이미지" />
+                    </figure>
+
+                    <ul>
+                        <li>왕산마을</li>
+                        <li><i class="xi-maker"></i> 충청남도 서산시 지곡면 중왕뱃마을길</li>
+                    </ul>
+                </div> <!-- 04 -->
+
+            </div> <!-- .list end -->
+
+
+        </div> <!-- .inner end -->
+    </section> <!-- .cont02 end -->
+
+
+
+    <footer> <!-- 홈페이지 하단 정보란 부분을 푸터라고 함 -->
+        <div class="inner">
+            <ul>
+                <li>바다여행소개</li>
+                <li>이메일무단수집거부</li>
+                <li>저작권보호정책</li>
+            </ul>
+            <p>한국어촌어항공단: (08588) 서울특별시 금천구 가산디지털2로 53 한라시그마밸리 12층</p>
+        </div> <!-- .inner end -->
+    </footer>
+
+</body>
+
+</html>
